@@ -51,6 +51,7 @@ require "paq" {
   "preservim/tagbar";
   "simeji/winresizer";
   "dstein64/vim-startuptime";
+  "mattn/emmet-vim";
 
   -- Colors
 
@@ -66,3 +67,4 @@ require "paq" {
   "junegunn/fzf.vim"
 
 }
+
