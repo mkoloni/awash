@@ -333,3 +333,18 @@ vim.api.nvim_set_keymap(
 )
 
 
+
+-- Emmet trigger key
+
+vim.cmd([[
+imap <C-o> <C-y>,
+
+]])
+
+
+-- Code Action Trigger
+
+vim.cmd([[
+nnoremap <C-p> :CodeActionMenu<Cr>
+
+]])

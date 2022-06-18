@@ -11,6 +11,7 @@ require "paq" {
  "williamboman/nvim-lsp-installer";
  "onsails/lspkind.nvim";
  "lukas-reineke/lsp-format.nvim";
+ "weilbith/nvim-code-action-menu";
 
   -- CMP
 
@@ -19,10 +20,7 @@ require "paq" {
   "hrsh7th/cmp-nvim-lsp";
   "hrsh7th/cmp-buffer";
   "hrsh7th/cmp-path";
-  "hrsh7th/vim-vsnip";
-  "hrsh7th/cmp-vsnip";
   "rafamadriz/friendly-snippets";
-
   "L3MON4D3/LuaSnip";
   "saadparwaiz1/cmp_luasnip";
 
@@ -56,11 +54,6 @@ require "paq" {
   -- Colors
 
   "Mofiqul/vscode.nvim";
-  "sainnhe/gruvbox-material";
-  "sainnhe/edge";
-  "sainnhe/everforest";
-  "folke/tokyonight.nvim";
-  "savq/melange";
 
   -- Fuzzy Finder
 

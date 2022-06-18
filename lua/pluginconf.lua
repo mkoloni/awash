@@ -439,7 +439,6 @@ cmp.setup({
       menu = ({
         nvim_lsp = "[LSP]",
         nvim_lua = "[Lua]",
-        vsnip = "[VSNIP]",
         path = "[Path]",
         buffer = "[Buffer]",
       }),
@@ -475,7 +474,6 @@ cmp.setup({
 	sources = {
 		{ name = "nvim_lsp" },
     { name = 'luasnip' }, -- For luasnip users.
-   	{ name = 'vsnip' },
 		{ name = "buffer" },
 		{ name = "path" },
 	},
