@@ -438,6 +438,7 @@ cmp.setup({
       maxwidth = 50, -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
       menu = ({
         nvim_lsp = "[LSP]",
+        vsnip = "[Snippet]",
         nvim_lua = "[Lua]",
         path = "[Path]",
         buffer = "[Buffer]",
@@ -473,7 +474,7 @@ cmp.setup({
   },
 	sources = {
 		{ name = "nvim_lsp" },
-    { name = 'luasnip' }, -- For luasnip users.
+    { name = 'vsnip' }, -- For vsnip users.
 		{ name = "buffer" },
 		{ name = "path" },
 	},
