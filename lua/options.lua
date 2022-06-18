@@ -120,3 +120,11 @@ vim.g.loaded_netrwFileHandlers = 1
 
 vim.lsp.set_log_level("debug")
 
+
+-- Treat templates files as html
+
+vim.cmd([[
+au BufReadPost *.tmpl set syntax=html
+
+]])
+
