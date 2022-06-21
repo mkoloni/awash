@@ -54,6 +54,8 @@ require "paq" {
   -- Colors
 
   "Mofiqul/vscode.nvim";
+  "ellisonleao/gruvbox.nvim";
+  "tanvirtin/monokai.nvim";
 
   -- Fuzzy Finder
 

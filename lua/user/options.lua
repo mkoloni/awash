@@ -11,8 +11,6 @@ vim.wo.relativenumber    = true
 vim.o.termguicolors = true
 vim.o.cursorline = false
 vim.o.cursorcolumn = false
-vim.cmd [[colorscheme vscode]]
-vim.cmd [[set background=dark]]
 vim.cmd [[set laststatus=3]] -- Have on statusline
 
 -- Behaviour

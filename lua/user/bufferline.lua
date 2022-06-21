@@ -1,0 +1,3 @@
+-- BufferLINE
+
+require("bufferline").setup()
