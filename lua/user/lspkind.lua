@@ -1,3 +1,0 @@
-
-local lspkind = require('lspkind')
-

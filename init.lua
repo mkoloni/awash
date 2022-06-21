@@ -5,7 +5,6 @@ require('user.options')
 require('user.plugins')
 require('user.lsp')
 
-require('user.lspkind')
 require('user.nvim-tree')
 require('user.nvim-devicons')
 require('user.cmp')
