@@ -12,6 +12,7 @@ require "paq" {
  "onsails/lspkind.nvim";
  "lukas-reineke/lsp-format.nvim";
  "weilbith/nvim-code-action-menu";
+ "ray-x/lsp_signature.nvim";
 
   -- CMP
 
@@ -24,9 +25,14 @@ require "paq" {
   "hrsh7th/vim-vsnip";
   "rafamadriz/friendly-snippets";
 
-  -- Utility
+  -- Tree Sitter
 
   "nvim-treesitter/nvim-treesitter";
+  "p00f/nvim-ts-rainbow";
+
+  -- Utility
+
+  "nvim-lualine/lualine.nvim";
   "kyazdani42/nvim-tree.lua";
   "akinsho/bufferline.nvim";
   "lukas-reineke/indent-blankline.nvim";
@@ -41,7 +47,6 @@ require "paq" {
   "karb94/neoscroll.nvim";
   "psliwka/vim-smoothie";
   "rrethy/vim-hexokinase";
-  "nvim-lualine/lualine.nvim";
   "iamcco/markdown-preview.nvim";
   "alvan/vim-closetag";
   "airblade/vim-gitgutter";
@@ -53,8 +58,6 @@ require "paq" {
 
   -- Colors
 
-  "Mofiqul/vscode.nvim";
-  "ellisonleao/gruvbox.nvim";
   "tanvirtin/monokai.nvim";
 
   -- Fuzzy Finder

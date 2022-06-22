@@ -4,6 +4,9 @@ if not present then
 end
 vim.opt.completeopt = "menuone,noselect"
 
+
+local lspkind = require('lspkind')
+
 cmp.setup({
 	-- Config
 	confirm_opts = {
@@ -20,19 +23,19 @@ cmp.setup({
 			require("luasnip").lsp_expand(args.body)
 		end,
 	},
- --[[  formatting = { ]]
-    --[[ format = lspkind.cmp_format({ ]]
-    --[[   mode = 'symbol', -- show only symbol annotations ]]
-    --[[   maxwidth = 50, -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters) ]]
-    --[[   menu = ({ ]]
-    --[[     nvim_lsp = "[LSP]", ]]
-    --[[     vsnip = "[Snippet]", ]]
-    --[[     nvim_lua = "[Lua]", ]]
-    --[[     path = "[Path]", ]]
-    --[[     buffer = "[Buffer]", ]]
-    --[[   }), ]]
-    --[[ }) ]]
-  --[[ }, ]]
+  formatting = {
+    format = lspkind.cmp_format({
+      mode = 'symbol', -- show only symbol annotations
+      maxwidth = 50, -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
+      menu = ({
+        nvim_lsp = "[LSP]",
+        vsnip = "[Snippet]",
+        nvim_lua = "[Lua]",
+        path = "[Path]",
+        buffer = "[Buffer]",
+      }),
+    })
+  },
 	-- Duplicates
 	duplicates = {
 		buffer = 1,
