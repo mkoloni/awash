@@ -45,6 +45,7 @@ vim.o.spell              = false
 vim.o.spelllang          = "en_us"
 vim.o.completeopt        = "menuone,noinsert,noselect"
 vim.o.wildmode           = "longest,full"
+vim.o.wrap = false
 
 -- highligh yanked text
 vim.cmd[[
@@ -53,13 +54,24 @@ autocmd!
 au TextYankPost * silent! lua vim.highlight.on_yank({higroup="Visual", timeout=300})
 augroup END
 ]]
+
 -- undo files
-vim.o.undofile = true
-vim.o.undodir = vim.fn.stdpath("config") .. "/undo"
+
+vim.cmd([[
+
+if has('persistent_undo')
+  set undodir=$HOME/.vim/undo
+  set undofile
+endif
+
+]])
+
 -- remove whitespace on save
 vim.cmd([[ au BufWritePre * :%s/\s\+$//e ]])
+
 -- don't auto commenting new lines
 vim.cmd([[au BufEnter * set fo-=c fo-=r fo-=o]])
+
 -- jump to the last position when reopening a file
 vim.cmd([[
 if has("autocmd")
@@ -82,10 +94,8 @@ vim.opt.completeopt = "menu,menuone,noselect"
 -- Folds
 
 vim.cmd([[
-" enable folding
 set foldenable
 set foldmethod=manual
-" for neovim to save folds
 au BufWinLeave * mkview
 au BufWinEnter * silent! loadview
 ]])
