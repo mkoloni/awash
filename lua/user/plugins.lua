@@ -53,7 +53,7 @@ require "paq" {
   "airblade/vim-gitgutter";
   "tpope/vim-fugitive";
   "preservim/tagbar";
-  "simeji/winresizer";
+  "eightpigs/win_resize.nvim";
   "dstein64/vim-startuptime";
   "mattn/emmet-vim";
 

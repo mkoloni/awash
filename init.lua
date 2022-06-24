@@ -23,7 +23,6 @@ require('user.trouble-nvim')
 require('user.colorscheme')
 require('user.error-reporting')
 
-
 vim.cmd([[
 
 " hi Normal guibg=none ctermbg=none
