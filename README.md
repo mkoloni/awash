@@ -7,9 +7,9 @@ Apart from that,it makes neovim even faster, with good configuratcomns
 
 ## Table of Content
 - [Screenshots](#screenshots)
-- [Requirements](#requirement)
+- [Requirements](#requirements)
 - [Getting Started](#getting-started)
-- [Mapping](#mapping)
+- [Mappings](#mappings)
 
 ## Screenshots
 
@@ -18,9 +18,11 @@ File Tree
 ![image](https://res.cloudinary.com/mkoloni/image/upload/v1655195326/2022-06-14-112650_1418x848_scrot_jsfmzc.png)
 
 Autocompletion
+
 ![image](https://res.cloudinary.com/mkoloni/image/upload/v1655195329/2022-06-14-112744_1418x848_scrot_xwenmm.png)
 
 Snippets
+
 ![image](https://res.cloudinary.com/mkoloni/image/upload/v1655195322/2022-06-14-112801_1418x848_scrot_usdnrr.png)
 
 ## Requirements
@@ -28,7 +30,7 @@ Snippets
 - [Neovim](https://neovim.io/) version 0.6 or higher
 - [Paq-nvim](https://github.com/savq/paq-nvim) for plugin management
 
-#### Getting Started
+## Getting Started
 
 For Unix/Linux and MacOS systems
 
@@ -37,14 +39,19 @@ cd ~
 
 rm .config/nvim
 
-git clone https://github.com/mkoloni/awash-neovim
+git clone https://github.com/mkoloni/awash-neovim ~/.config/nvim
 
-nvim .
+git clone --depth=1 https://github.com/savq/paq-nvim.git \
+    "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/pack/paqs/start/paq-nvim
 
 ```
 
-#### Mapping
-[Vimuk](https://github.com/mkoloni) comes with its own keybindings but you could easily override theme with your own if you wanted.
+This will install awash and paq plugin manager in your system.
+
+Just open up neovim and hit :PaqSync
+
+## Mappings
+Here are the keybindings in [awash](https://github.com/mkoloni/awash)
 
 |   Mode        |  Key              |   Remap                                   |  Description                |
 | :-------------| :---------------- | :---------------------------------------: | -------------------------:  |
