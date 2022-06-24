@@ -1,37 +1,25 @@
 -- Require files
 
-require('user.mappings')
-require('user.options')
-require('user.plugins')
-require('user.lsp')
+require('awash.mappings')
+require('awash.options')
+require('awash.plugins')
+require('awash.lsp')
 
-require('user.nvim-tree')
-require('user.lualine')
-require('user.treesitter')
-require('user.luasnip')
-require('user.nvim-devicons')
-require('user.cmp')
-require('user.autopairs')
-require('user.bufferline')
-require('user.closetags')
-require('user.commenter')
-require('user.gitgutter')
-require('user.indent-blank-line')
-require('user.tagbar')
-require('user.toggleterm')
-require('user.trouble-nvim')
-require('user.colorscheme')
-require('user.error-reporting')
+require('awash.nvim-tree')
+require('awash.lualine')
+require('awash.treesitter')
+require('awash.luasnip')
+require('awash.nvim-devicons')
+require('awash.cmp')
+require('awash.autopairs')
+require('awash.bufferline')
+require('awash.closetags')
+require('awash.commenter')
+require('awash.gitgutter')
+require('awash.indent-blank-line')
+require('awash.tagbar')
+require('awash.toggleterm')
+require('awash.trouble-nvim')
+require('awash.colorscheme')
+require('awash.error-reporting')
 
-vim.cmd([[
-
-" hi Normal guibg=none ctermbg=none
-" hi LineNr guibg=none ctermbg=none
-" hi Folded guibg=none ctermbg=none
-" hi NonText guibg=none ctermbg=none
-" hi SpecialKey guibg=none ctermbg=none
-" hi VertSplit guibg=none ctermbg=none
-" hi SignColumn guibg=none ctermbg=none
-" hi EndOfBuffer guibg=none ctermbg=none
-
-]])
