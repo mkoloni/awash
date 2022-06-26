@@ -1,103 +1,116 @@
--- Visual
-
-vim.o.conceallevel       = 0
-vim.o.cmdheight          = 1
-vim.o.pumheight          = 10
-vim.o.showmode           = false
-vim.o.showtabline        = 2
-vim.o.title              = true
-vim.wo.number            = true
-vim.wo.relativenumber    = true
-vim.o.termguicolors = true
-vim.o.cursorline = false
-vim.o.cursorcolumn = false
-vim.cmd [[set laststatus=3]] -- Have on statusline
-
--- Behaviour
-
 vim.wo.signcolumn = 'yes'
+vim.o.synmaxcol = 240         -- Max column for syntax highlight
+
+-- Searching
+
 vim.o.hlsearch           = false
 vim.o.updatetime = 250
 vim.o.ignorecase         = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.smartcase          = true
+
+-- Indenting
+
 vim.o.smarttab           = true
 vim.o.smartindent        = true
 vim.o.expandtab          = true
 vim.o.tabstop            = 2
 vim.o.softtabstop        = 2
 vim.o.shiftwidth         = 2
+
+-- Don't auto commenting new lines
+
+vim.cmd([[au BufEnter * set fo-=c fo-=r fo-=o]])
+
+-- Handling splits
+
 vim.o.splitbelow         = true
 vim.o.splitright         = true
-vim.o.scrolloff          = 12
-vim.o.sidescrolloff      = 8
+
+-- vim.o.scrolloff          = 12
+-- vim.o.sidescrolloff      = 8
+
+-- Add Mouse support
+
 vim.o.mouse              = 'a'
 vim.opt.mousefocus = true
-vim.o.hidden = true           -- Enable background buffers
+
+-- Enable background buffers
+
+vim.o.hidden = true
+
 vim.o.history = 100           -- Remember N lines in history
-vim.o.lazyredraw = true       -- Faster scrolling
-vim.o.synmaxcol = 240         -- Max column for syntax highlight
+
+-- Making neovim faster
+
+vim.o.lazyredraw = true
+
+-- Swap files suck
+
 vim.cmd [[set noswapfile]]
-vim.cmd [[set clipboard+=unnamedplus]] -- Use global clipboard
+
+
+-- Use global clipboard
+
+vim.cmd [[set clipboard+=unnamedplus]]
+
+-- Lang and spell
+
 vim.o.fileencoding       = "utf-8"
 vim.o.spell              = false
-vim.o.spelllang          = "en_us"
+
+-- Completion behavior
+
 vim.o.completeopt        = "menuone,noinsert,noselect"
 vim.o.wildmode           = "longest,full"
-vim.o.wrap = false
 
--- highligh yanked text
+-- Enable line wraps
+vim.o.wrap = true
+
+-- Highligh yanked text
+
 vim.cmd[[
 augroup highlight_yank
 autocmd!
-au TextYankPost * silent! lua vim.highlight.on_yank({higroup="Visual", timeout=300})
+au TextYankPost * silent! lua vim.highlight.on_yank({higroup="Visual", timeout=350})
 augroup END
 ]]
 
--- undo files
+-- Enable undo files
 
 vim.cmd([[
 
-if has('persistent_undo')
-  set undodir=$HOME/.vim/undo
-  set undofile
-endif
+set undodir=$HOME/.vim/undo
+set undofile
 
 ]])
 
--- remove whitespace on save
+-- Remove whitespace on save
+
 vim.cmd([[ au BufWritePre * :%s/\s\+$//e ]])
 
--- don't auto commenting new lines
-vim.cmd([[au BufEnter * set fo-=c fo-=r fo-=o]])
+-- Return to last position
 
--- jump to the last position when reopening a file
 vim.cmd([[
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 endif
 ]])
 
--- Disable inline error messages
-
-vim.diagnostic.config {
-  virtual_text = false,
-  underline = false,
-  signs = true,
-}
-
 -- Completion
 
 vim.opt.completeopt = "menu,menuone,noselect"
 
--- Folds
+-- Create folds manually and let the folds be persistent
 
 vim.cmd([[
+
 set foldenable
 set foldmethod=manual
 au BufWinLeave * mkview
 au BufWinEnter * silent! loadview
+
 ]])
 
 -- Disable Neovim BuiltIn Plugins
@@ -123,16 +136,4 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.g.loaded_netrwSettings = 1
 vim.g.loaded_netrwFileHandlers = 1
-
--- Logging and debugging
-
-vim.lsp.set_log_level("debug")
-
-
--- Treat templates files as html
-
-vim.cmd([[
-au BufReadPost *.tmpl set syntax=html
-
-]])
 

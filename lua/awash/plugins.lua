@@ -56,6 +56,7 @@ require "paq" {
   "eightpigs/win_resize.nvim";
   "dstein64/vim-startuptime";
   "mattn/emmet-vim";
+  "max397574/better-escape.nvim";
 
   -- Colors
 

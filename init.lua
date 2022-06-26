@@ -1,7 +1,6 @@
 -- Require files
 
 require('awash.mappings')
-require('awash.options')
 require('awash.plugins')
 require('awash.lsp')
 
@@ -22,4 +21,6 @@ require('awash.toggleterm')
 require('awash.trouble-nvim')
 require('awash.colorscheme')
 require('awash.error-reporting')
-
+require('awash.better-escape')
+require('awash.behavior')
+require('awash.visuals')

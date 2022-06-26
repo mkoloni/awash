@@ -3,38 +3,6 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- Escape Key
-
-vim.api.nvim_set_keymap(
-  'i',
-  'jk',
-  '<ESC>',
-  { noremap = true }
-)
-
-vim.api.nvim_set_keymap(
-  'i',
-  'jj',
-  '<ESC>',
-  { noremap = true }
-)
-
--- Sourcing Files
-
-vim.api.nvim_set_keymap(
-  'n',
-  '<leader>r',
-  ':source ~/.config/nvim/init.lua<CR>',
-  { noremap = true }
-)
-
-vim.api.nvim_set_keymap(
-  'n',
-  '<C-r>',
-  ':source ~/.config/nvim/init.lua<CR>',
-  { noremap = true }
-)
-
 -- Repeat Key
 
 vim.api.nvim_set_keymap(
@@ -71,108 +39,6 @@ vim.api.nvim_set_keymap(
   'v',
   '<Tab>',
   '>gv',
-  { noremap = true }
-)
-
--- Disabling Keys
-
-vim.api.nvim_set_keymap(
-  'n',
-  '<Up>',
-  'Nop',
-  { noremap = true }
-)
-
-vim.api.nvim_set_keymap(
-  'n',
-  '<Down>',
-  'Nop',
-  { noremap = true }
-)
-
-vim.api.nvim_set_keymap(
-  'n',
-  '<Left>',
-  'Nop',
-  { noremap = true }
-)
-
-vim.api.nvim_set_keymap(
-  'n',
-  '<Right>',
-  'Nop',
-  { noremap = true }
-)
-
-vim.api.nvim_set_keymap(
-  'v',
-  '<Up>',
-  'Nop',
-  { noremap = true }
-)
-
-vim.api.nvim_set_keymap(
-  'v',
-  '<Down>',
-  'Nop',
-  { noremap = true }
-)
-
-vim.api.nvim_set_keymap(
-  'v',
-  '<Left>',
-  'Nop',
-  { noremap = true }
-)
-
-vim.api.nvim_set_keymap(
-  'v',
-  '<Right>',
-  'Nop',
-  { noremap = true }
-)
-
-vim.api.nvim_set_keymap(
-  'c',
-  '<Up>',
-  'Nop',
-  { noremap = true }
-)
-
-vim.api.nvim_set_keymap(
-  'c',
-  '<Down>',
-  'Nop',
-  { noremap = true }
-)
-
-vim.api.nvim_set_keymap(
-  'c',
-  '<Left>',
-  'Nop',
-  { noremap = true }
-)
-
-vim.api.nvim_set_keymap(
-  'c',
-  '<Right>',
-  'Nop',
-  { noremap = true }
-)
-
--- Window Resize Mode
-
-vim.api.nvim_set_keymap(
-  'n',
-  '<C-g>',
-  ':WinResizerStartResize<CR>',
-  { noremap = true }
-)
-
-vim.api.nvim_set_keymap(
-  'n',
-  '<leader>g',
-  ':WinResizerStartResize<CR>',
   { noremap = true }
 )
 
@@ -221,13 +87,6 @@ vim.api.nvim_set_keymap(
 )
 
 -- Toggle File Tree
-
-vim.api.nvim_set_keymap(
-  'n',
-  '<leader>e',
-  ':NvimTreeToggle<Enter>',
-  { noremap = true }
-)
 
 vim.api.nvim_set_keymap(
   'n',
@@ -314,15 +173,6 @@ vim.api.nvim_set_keymap(
   { noremap = true }
 )
 
--- No problem missing the r key in normal mode
-
-vim.api.nvim_set_keymap(
-  'n',
-  'e',
-  'r',
-  { noremap = true }
-)
-
 -- Creative Genious
 
 vim.api.nvim_set_keymap(
@@ -332,19 +182,27 @@ vim.api.nvim_set_keymap(
   { noremap = true }
 )
 
-
-
 -- Emmet trigger key
 
-vim.cmd([[
-imap <C-o> <C-y>,
-
-]])
-
-
+--[[ vim.api.nvim_set_keymap( ]]
+--[[   'i', ]]
+--[[   '<C-o>', ]]
+--[[   '<C-y>,', ]]
+--[[   { noremap = true } ]]
+--[[ ) ]]
+--[[  ]]
 -- Code Action Trigger
 
+
+vim.api.nvim_set_keymap(
+  'n',
+  '<C-p>',
+  ':CodeActionMenu<Cr>,',
+  { noremap = true }
+)
+
+
 vim.cmd([[
-nnoremap <C-p> :CodeActionMenu<Cr>
+imap <C-o> <c-y>,
 
 ]])
