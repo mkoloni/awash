@@ -95,6 +95,15 @@ vim.api.nvim_set_keymap(
   { noremap = true }
 )
 
+-- Remember File Tree
+
+vim.api.nvim_set_keymap(
+  'n',
+  '<leader>r',
+  ':NvimTreeRefresh<Enter>',
+  { noremap = true }
+)
+
 -- Buffers and Windows
 
 vim.api.nvim_set_keymap(
@@ -157,7 +166,7 @@ vim.api.nvim_set_keymap(
   { noremap = true }
 )
 
--- Better j and k
+-- Auto center the text under the cursor
 
 vim.api.nvim_set_keymap(
   'n',
@@ -168,12 +177,26 @@ vim.api.nvim_set_keymap(
 
 vim.api.nvim_set_keymap(
   'n',
-  'k',
-  'gkzz',
+  'n',
+  'nzz',
   { noremap = true }
 )
 
--- Creative Genious
+vim.api.nvim_set_keymap(
+  'n',
+  'N',
+  'Nzz',
+  { noremap = true }
+)
+
+vim.api.nvim_set_keymap(
+  'n',
+  'G',
+  'Gzz',
+  { noremap = true }
+)
+
+-- Instead of hitting enter
 
 vim.api.nvim_set_keymap(
   'c',
@@ -184,16 +207,12 @@ vim.api.nvim_set_keymap(
 
 -- Emmet trigger key
 
---[[ vim.api.nvim_set_keymap( ]]
---[[   'i', ]]
---[[   '<C-o>', ]]
---[[   '<C-y>,', ]]
---[[   { noremap = true } ]]
---[[ ) ]]
---[[  ]]
+vim.cmd([[
+imap <C-o> <c-y>,
+
+]])
+
 -- Code Action Trigger
-
-
 vim.api.nvim_set_keymap(
   'n',
   '<C-p>',
@@ -201,8 +220,3 @@ vim.api.nvim_set_keymap(
   { noremap = true }
 )
 
-
-vim.cmd([[
-imap <C-o> <c-y>,
-
-]])

@@ -44,7 +44,7 @@ vim.o.history = 100           -- Remember N lines in history
 
 -- Making neovim faster
 
-vim.o.lazyredraw = true
+-- vim.o.lazyredraw = true
 
 -- Swap files suck
 
